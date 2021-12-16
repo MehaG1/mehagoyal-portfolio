@@ -103,3 +103,66 @@ function home_customizer($wp_customize) {
   ));
 }
 add_action( 'customize_register', 'home_customizer' );
+
+function biography_customizer($wp_customize){
+  require 'section_vars.php';
+  $wp_customize->add_section('bio_section', array(
+    'title' => "Biography",
+  ));
+  $wp_customize->add_setting('bio_name', array(
+    'default' => 'Meha Goyal',
+  ));
+  $wp_customize->add_control('bio_name', array(
+    'label' => 'Name',
+    'section' => 'bio_section',
+  ));
+  $wp_customize->add_setting('biography', array(
+    'default' => 'Hi! My name is Meha',
+  ));
+  $wp_customize->add_control('biography', array(
+    'label' => 'Biography Description',
+    'section' => 'bio_section',
+    'type' => 'textarea',
+  ));
+  $wp_customize->add_setting('bio_image');
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    'bio_image',
+    array(
+      'label' => 'Biography Image',
+      'section' => 'bio_section'
+    )
+  ));
+}
+add_action('customize_register', 'biography_customizer');
+
+function portfolio_projects_customizer($wp_customize){
+  require 'section_vars.php';
+  $wp_customize->add_section('project_section', array(
+    'title' => "Projects",
+  ));
+  $wp_customize->add_setting('project_title', array(
+    'default' => 'Default Project Name',
+  ));
+  $wp_customize->add_control('project_title', array(
+    'label' => 'Project Name',
+    'section' => 'project_section',
+  ));
+  $wp_customize->add_setting('project_description');
+  $wp_customize->add_control('project_description', array(
+    'label' => 'Project Description',
+    'section' => 'project_section',
+    'type' => 'textarea',
+  ));
+  $wp_customize->add_setting('project_image');
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    'project_image',
+    array(
+      'label' => 'Project Image',
+      'section' => 'project_section'
+    )
+  ));
+
+}
+add_action('customize_register', 'project_customizer');

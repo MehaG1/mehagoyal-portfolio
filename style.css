@@ -1,83 +1,69 @@
-/*
-Theme Name: Void Tech Theme
-Author: VOID Tech Consulting
-Author URI: https://wordpress.org/
-Description: This theme is setup to be easy flexible and customizable according to your preferences.
-Version: 1.2
-Requires at least: 5.0
-Tested up to: 5.7
-Requires PHP: 7.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: voidtech
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
-/* START Reset */
-/* Box sizing rules */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+ min-height: 100vh;
+ text-rendering: optimizeSpeed;
+ line-height: 1.5;
+ font-size: 14px;
+ font-family: 'Montserrat', sans-serif;
+   font-weight: bold;
 }
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none;
-}
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-/* Make images easier to work with */
-img {
-  max-width: 100%;
-  display: block;
-}
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
+ 
 html {
-  font-size: 62.5%;
+ font-size: 62.5%;
+ scroll-behavior: smooth;
 }
-/* END Reset */
-/* 
-  Put styles here 
-*/
+ 
+.nav-bar li {
+ font-family: "Montserrat", sans-serif; /*Change to your preference*/
+ font-weight: 500;
+ font-size: 30px; /*Change to your preference*/
+ display: inline-block;
+ padding: 0px 20px;
+ list-style: none;
+}
+ 
+.nav-bar li a{
+ transition: all 0.3s ease 0s;
+ text-decoration: none;
+ text-transform: uppercase;
+ color: black; /*Change to your preference*/
+}
+ 
+.nav-bar li a:hover{
+color: #c97eb4;
+}
+ 
+header {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ align-items: center;
+ padding: 30px 10%;
+ color:black;
+ background-color: white;
+}
+ 
+.title {
+ cursor: pointer;
+ color: black; /*Change to your preference*/
+}
+ 
+footer {
+ position:absolute;
+ bottom:0;
+ width:100%;
+ height:60px;   /* Height of the footer */
+ text-align: center;
+ background: white;
+ color: black;
+}
