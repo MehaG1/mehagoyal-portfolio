@@ -52,7 +52,57 @@ header {
  color:black;
  background-color: white;
 }
+
+#header-intro{
+    color:black;
+    background-color: #fdf0e6;
+    height:400px;
+    width:100%;
+    display: flex;
+   flex-direction: row;
+   align-items:center;
+   justify-content:space-between;
+}
+
+#header-intro h1 {
+	font-size: 64px;
+	margin: 0;
+}
+
+#header-intro h2 {
+	font-size: 40px;
+	margin: 0;
+	color: #F45B69;
+	/* Make all of the characters to uppercase*/
+	text-transform: uppercase;
+}
+
+#header-intro img {
+	width: 400px;
+	height: 310px;
+	background-color: #fff;
+	border-radius: 20%;
+	margin-left: 40px;
+}
+
+#about {
+    color:white;
+    background-color: black;
+    min-height:400px;
+    width:100%;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+
+ #about > div {
+	max-width: 640px;
+	padding: 16px 40px 16px 40px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+}
  
+
 .title {
  cursor: pointer;
  color: black; /*Change to your preference*/

@@ -136,7 +136,7 @@ function biography_customizer($wp_customize){
 }
 add_action('customize_register', 'biography_customizer');
 
-function portfolio_projects_customizer($wp_customize){
+function project_customizer($wp_customize){
   require 'section_vars.php';
   $wp_customize->add_section('project_section', array(
     'title' => "Projects",

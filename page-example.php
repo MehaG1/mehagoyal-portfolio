@@ -9,9 +9,6 @@
   <button  type="submit">Save!</button>
 </form>
 
-
-
-
 <div>
     <?php
       require 'inc/section_vars.php';   
